@@ -1,7 +1,7 @@
 const Intern = require ('../lib/Intern');
 
 //name, email, id, role and school  name  for intern 
-const internTest = new Intern ('Prani', 'prani@gmail.com', 3 , 'Intern', 'UWA')
+const internTest = new Intern ('Briana', 'Briana@gmail.com', 3 , 'Intren', 'UOM')
 
 describe('Intern', () => {
     it('has a name', () =>{
