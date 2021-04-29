@@ -1,0 +1,32 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "jest __tests__ ",
+    "employee-test": "jest __tests__/Employee.test.js",
+    "intern-test": "jest __tests__/Intern.test.js",
+    "manager-test": "jest __tests__/Manager.test.js",
+    "engineer-test": "jest __tests__/Engineer.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaimajobran/Team-Profile-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaimajobran/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/shaimajobran/Team-Profile-Generator#readme"
+}
