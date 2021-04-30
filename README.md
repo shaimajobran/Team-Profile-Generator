@@ -31,5 +31,13 @@ THEN I exit the application, and the HTML is generated
 
 ## Links
 [Youtube link](https://youtu.be/FwFFn8b3xAw)
-[link](https://github.com/shaimajobran/Team-Profile-Generator)
-[link]
+
+[link github](https://github.com/shaimajobran/Team-Profile-Generator)
+
+[link html](https://github.com/shaimajobran/Team-Profile-Generator/blob/main/dist/index.html)
+
+## screenshots
+![screenshot](Assets/images/Screenshot-2021-04-30-144317.jpg)
+![screenshot](Assets/images/Screenshot2021-04-30414614.jpg)
+![screenshot](Assets/images/Screenshot-2021-04-30-145202.jpg)
+![screenshot](Assets/images/Screenshot-2021-04-30-145400.jpg)
