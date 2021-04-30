@@ -1,20 +1,30 @@
-const Intern = require("../lib/Intern");
+const Intern = require ('../lib/Intern');
 
-test("Can set school via constructor", () => {
-  const testValue = "UCLA";
-  const e = new Intern("Foo", 1, "test@test.com", testValue);
-  expect(e.school).toBe(testValue);
-});
+//name, email, id, role and school  name validation for intern 
+const internTest = new Intern ('Prani', 'prani@gmail.com', 3 , 'Intern', 'UWA')
 
-test("getRole() should return \"Intern\"", () => {
-  const testValue = "Intern";
-  const e = new Intern("Foo", 1, "test@test.com", "UAEU");
-  expect(e.getRole()).toBe(testValue);
-});
+describe('Intern', () => {
+    it('has a name', () =>{
+        expect(internTest.name).toEqual(expect.any(String))
+        expect(internTest.name.length).toBeGreaterThan(2)
 
-test("Can get school via getSchool()", () => {
-  const testValue = "UCLA";
-  const e = new Intern("Foo", 1, "test@test.com", testValue);
-  expect(e.getSchool()).toBe(testValue);
-});
+    })
+    it('has an email id', () =>{
+        expect(internTest.email).toEqual(expect.stringContaining('@'))
+    })
 
+    it('has an id that is a num', () => {
+        expect(internTest.id).toEqual(expect.any(Number))
+    })
+
+    it('has a role of engineer', () => {
+        expect(internTest.role).toBe('Intern')
+    })
+
+    it('has a school name', () => {
+        keys = Object.keys(internTest )
+        optionKey = keys[4]
+        expect(optionKey).toBe('school')
+        expect(internTest.school).toEqual(expect.any(String))
+    })
+})

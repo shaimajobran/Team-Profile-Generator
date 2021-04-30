@@ -27,7 +27,7 @@ let generatehtmlPage = teamObj => {
 
 
        //htmll card
-        let {name, role, email, id} = teamObj[i]
+        let {name, email, id,role } = teamObj[i]
         htmlCard+= `
          <div class="card col" style="width: 18rem;">
          <div class="card-body card-header">
@@ -91,3 +91,4 @@ let generatehtmlPage = teamObj => {
 
 
 module.exports = generatehtmlPage;
+

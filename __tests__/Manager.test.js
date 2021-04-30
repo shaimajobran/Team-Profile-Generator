@@ -1,20 +1,30 @@
-const Manager = require("../lib/Manager");
-const Employee = require("../lib/Employee");
+const Manager = require ('../lib/Manager');
 
-test("Can set office number via constructor argument", () => {
-  const testValue = 100;
-  const e = new Manager("Foo", 1, "test@test.com", testValue);
-  expect(e.officeNumber).toBe(testValue);
-});
+//name, email, id, role and school  name validation for manager
+const managerTest = new Manager ('Shaima', 'shaima@gmail.com', 4 , 'Manager', 109)
 
-test('getRole() should return "Manager"', () => {
-  const testValue = "Manager";
-  const e = new Manager("Foo", 1, "test@test.com", 100);
-  expect(e.getRole()).toBe(testValue);
-});
+describe('Manager', () => {
+    it('has a name', () =>{
+        expect(managerTest.name).toEqual(expect.any(String))
+        expect(managerTest.name.length).toBeGreaterThan(2)
 
-test("Can get officeNumber via getOfficeNumber()", () => {
-  const testValue = 100;
-  const e = new Manager("Foo", 1, "test@test.com", testValue);
-  expect(e.getOfficeNumber()).toBe(testValue);
-});
+    })
+    it('has an email id', () =>{
+        expect(managerTest.email).toEqual(expect.stringContaining('@'))
+    })
+
+    it('has an id that is a num', () => {
+        expect(managerTest.id).toEqual(expect.any(Number))
+    })
+
+    it('has a role of engineer', () => {
+        expect(managerTest.role).toBe('Manager')
+    })
+
+    it('has a office number', () => {
+        keys = Object.keys(managerTest)
+        optionKey = keys[4]
+        expect(optionKey).toBe('office')
+        expect(managerTest.office).toEqual(expect.any(Number))
+    })
+})

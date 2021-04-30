@@ -1,48 +1,26 @@
-const Employee = require("../lib/Employee");
+const Employee = require ('../lib/Employee');
 
-test("Can instantiate Employee instance", () => {
-  const e = new Employee();
-  expect(typeof(e)).toBe("object");
-});
+//name,email,id,role validation
 
-test("Can set name via constructor arguments", () => {
-  const name = "Shaima";
-  const e = new Employee(name);
-  expect(e.name).toBe(name);
-});
+const employeeTest = new Employee ("Ryan", "ryan90@gmail.com", 3 , "Employee");
 
-test("Can set id via constructor argument", () => {
-  const testValue = 100;
-  const e = new Employee("Foo", testValue);
-  expect(e.id).toBe(testValue);
-});
 
-test("Can set email via constructor argument", () => {
-  const testValue = "test@test.com";
-  const e = new Employee("Foo", 1, testValue);
-  expect(e.email).toBe(testValue);
-});
+describe('Employee', () => {
+    it('has a name', () => {
+        expect(employeeTest.name).toEqual(expect.any(String))
+        expect(employeeTest.name.length).toBeGreaterThan(2)
+    })
 
-test("Can get name via getName()", () => {
-  const testValue = "Shaima";
-  const e = new Employee(testValue);
-  expect(e.getName()).toBe(testValue);
-});
+    it('has an email id', () =>{
+        expect(employeeTest.email).toEqual(expect.stringContaining('@'))
+    })
 
-test("Can get id via getId()", () => {
-  const testValue = 100;
-  const e = new Employee("Foo", testValue);
-  expect(e.getId()).toBe(testValue);
-});
+    it('has an id that is a num', () => {
+        expect(employeeTest.id).toEqual(expect.any(Number))
+    })
 
-test("Can get email via getEmail()", () => {
-  const testValue = "test@test.com";
-  const e = new Employee("Foo", 1, testValue);
-  expect(e.getEmail()).toBe(testValue);
-});
+    it('has a role of employee', () => {
+        expect(employeeTest.role).toBe('Employee')
+    })
 
-test("getRole() should return \"Employee\"", () => {
-  const testValue = "Employee";
-  const e = new Employee("Shaima", 1, "test@test.com");
-  expect(e.getRole()).toBe(testValue);
-});
+})

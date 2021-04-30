@@ -11,7 +11,7 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
 //importing layout template file
-const generateTemplate = require('./source/layout-templte');
+const generateTemplate = require('./source/layout-template');
 
 
 //importing generate function 
@@ -176,3 +176,4 @@ function userInfo() {
 
 
 userInfo();
+
