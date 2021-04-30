@@ -2,7 +2,7 @@ const Engineer = require('../lib/Engineer');
 
 //name, email, id, role and github user name validation for Engineer
 
-const engineerTest = new Engineer ('Prani', 'prani@gmail.com', 2, 'Engineer', 'AlishaPanday')
+const engineerTest = new Engineer ('shaima', 'shaima@gmail.com', 2, 'Engineer', 'shaimaJobran')
 
 describe("Engineer", () =>{
     it('has a name', () =>{
